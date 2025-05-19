@@ -1,0 +1,217 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 2px solid green;
+  border-radius: 8px;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.nama-tim,
+.lintasan,
+.hari {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 20px;
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+}
+
+.position-log {
+  flex: 0.5;
+  border: 2px solid green;
+  background-color: rgb(255, 255, 144);
+  flex-direction: column;
+}
+
+.list1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.list2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.step{
+  width: 70%;
+  border: 2px solid green;
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.stats{
+  width: 70%;
+  border: 2px solid green;
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.log-tittle,
+.attitude-tittle {
+  border-bottom: 2px solid green;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+  width: 50%;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  width: 320px;
+  height: 240px;
+}
+
+.attitudes {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 10px; */
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+}
+
+.attitudeinfo {
+  width: 339px;
+  border-bottom: 2px solid green;
+  border-top: 2px solid green;
+  background-color: rgb(255, 255, 144);
+}
+
+.video{
+  border: 2px solid green;
+  width: 24%;
+  background-color: yellow;
+}
+
+.vidInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.attitude {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  width: 660px;
+  height: 280px;
+}
+
+/* CSS tambahan untuk indikator langkah aktif */
+.active-step {
+  width: 70%;
+  border: 2px solid green;
+  background-color: rgb(0, 255, 0);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .scores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+    width: 70%;
+  }
+
+  .attitudeinfo{
+    width: 70%;
+  }
+
+  .video{
+    width: 70%;
+    height: 200px;
+  }
+
+  .attitudes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+    width: 100%;
+  }
+
+  .content,
+  .attitudes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scores,
+  .attitudes {
+    gap: 10px;
+  }
+
+  .score,
+  .attitude {
+    width: 90%;
+  }
+}

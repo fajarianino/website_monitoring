@@ -1,0 +1,302 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 2px solid #d55252;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  background-color: #a5dfa0;
+  padding: 10px;
+}
+
+.nama-tim,
+.lintasan,
+.hari {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 20px;
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+}
+
+.position-log {
+  width: 320px;
+  display: flex;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: rgb(228, 228, 228);
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+}
+
+.list1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.list2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.step{
+  width: 70%;
+  border: 2px solid #e5e5e5;
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.stats{
+  width: 70%;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.log-tittle,
+.attitude-tittle {
+  border-bottom: 2px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+  width: 50%;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  height: 267px;
+}
+
+.logo-box{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+  width: 325px;
+}
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  width:325px;
+  height: 100%;
+}
+
+.attitudes {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 10px; */
+  flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+}
+
+.attitudeinfo {
+  width: 320px;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  background-color: rgb(227, 227, 227);
+}
+
+/* Container peta di dalam attitude */
+.attitude {
+  position: relative; /* Penting untuk memastikan grid overlay diposisikan relatif terhadap .attitude */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  width: 660px;
+  height: 280px; /* Sesuaikan tinggi */
+  overflow: hidden; /* Agar grid tidak melebihi area attitude */
+  z-index: 1; /* Pastikan ini di bawah grid overlay */
+}
+
+/* Grid Overlay di dalam class .attitude */
+.grid-overlay {
+  position: absolute;
+  top: 50%; /* Set ke tengah secara vertikal */
+  left: 50%; /* Set ke tengah secara horizontal */
+  transform: translate(-50%, -50%); /* Untuk memastikan benar-benar berada di tengah */
+  z-index: 10; /* Z-index lebih besar untuk memastikan grid ada di atas peta */
+  width: 63%; /* Lebar menyesuaikan elemen .attitude */
+  height: 80%; /* Sesuaikan tinggi agar proporsional */
+  pointer-events: none; /* Agar grid tidak mengganggu interaksi dengan peta */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tabel grid di dalam overlay */
+.grid-overlay table {
+  border-collapse: collapse;
+  width: 80%; /* Sesuaikan lebar tabel untuk proporsi yang lebih fleksibel */
+  height: 80%; /* Sesuaikan tinggi tabel untuk proporsi yang lebih fleksibel */
+  background-color: rgba(255, 255, 255, 0.19); /* Latar belakang semi-transparan */
+  border-radius: 8px; /* Tambahkan pembulatan pada sudut tabel */
+}
+
+.grid-overlay th,
+.grid-overlay td {
+  border: 1px solid #e5e5e5; /* Batas tabel */
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(104, 239, 248, 0.466); /* Warna semi-transparan agar peta tetap terlihat */
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+  .attitude {
+    width: 90%; /* Sesuaikan lebar di perangkat kecil */
+    height: auto; /* Sesuaikan tinggi di perangkat kecil */
+  }
+
+  .grid-overlay table {
+    width: 90%; /* Lebar tabel lebih besar di perangkat kecil */
+    height: 90%; /* Sesuaikan tinggi tabel untuk perangkat kecil */
+  }
+}
+
+
+/* CSS tambahan untuk indikator langkah aktif */
+.active-step {
+  width: 70%;
+  border: 2px solid #e5e5e5;
+  background-color: rgb(0, 255, 0);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row-reverse;
+    gap: 5px;
+  }
+
+  .scores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+    width: 70%;
+  }
+
+  .attitudeinfo{
+    width: 70%;
+  }
+
+  .video{
+    width: 20%;
+    height: 200px;
+  }
+
+  .attitudes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Tambahkan ini untuk responsif */
+    width: 100%;
+  }
+
+  .content,
+  .attitudes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scores,
+  .attitudes {
+    gap: 10px;
+  }
+
+  .score,
+  .attitude {
+    width: 90%;
+  }
+  /* Video container styling */
+  .video-container {
+    margin-top: 20px;
+  }
+
+  .video-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .video-container video {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);}
+    
+}
